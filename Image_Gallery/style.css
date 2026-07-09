@@ -1,0 +1,199 @@
+/* --- Reset & Base Layout --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Filter Menu Buttons --- */
+.filter-container {
+    margin-bottom: 40px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #aaa;
+    border: 2px solid #333;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: #fff;
+    border-color: #00adb5;
+    background-color: #00adb5;
+    box-shadow: 0 0 10px rgba(0, 173, 181, 0.5);
+}
+
+/* --- Responsive Gallery Grid --- */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #1e1e1e;
+    /* Controls the hiding/showing transitions during filtering */
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+/* Class added via JS to filter items out */
+.gallery-item.hide {
+    transform: scale(0.8);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Dark Overlay Overlay */
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Sliding Text Caption */
+.item-caption {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    color: #fff;
+    z-index: 2;
+    transition: bottom 0.3s ease;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.gallery-item:hover .item-caption {
+    bottom: 20px;
+}
+
+/* --- Lightbox / Modal --- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-content {
+    max-width: 85%;
+    max-height: 80vh;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+    border-radius: 4px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+/* Controls UI */
+.close-btn {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: rgba(171, 159, 159, 0.6);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: color 0.2s, scale 0.2s;
+    user-select: none;
+}
+
+.nav-btn:hover {
+    color: #dfc8c8;
+    scale: 1.1;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-btn { font-size: 35px; padding: 5px 10px; }
+    .close-btn { top: 20px; right: 20px; font-size: 35px; }
+    .lightbox-content { max-width: 95%; }
+}
