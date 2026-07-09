@@ -1,0 +1,388 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #a0a0a0;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.Container {
+    max-width: 1200px;
+    padding-top: 40px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+}
+
+/* ------------------------------------------------SliderBar---------------------------------------------------- */
+
+.SliderBar {
+    height: 90vh;
+    background-color: #2a2a2a;
+    border: 2px solid #3a3a3a ;
+    border-radius: 15px;
+    padding: 40px;
+    position: sticky;
+    top: 40px;
+}
+
+/* Porfile CSS */
+
+.Porfile {
+    text-align: center;
+}
+
+.Porfile img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid #3a3a3a;
+    border-radius: 50%;
+}
+
+.Porfile h2 {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.Porfile p {
+    background-color: #1e1e1e;
+    color: #FFBF00;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: 2px solid #3a3a3a ;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* Contact CSS */
+
+.Contact {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #3a3a3a;
+}
+
+.Label {
+    color: #a0a0a0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 07px; 
+}
+
+.Value {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.Email .Phone {
+    margin-bottom: 10px;
+}
+
+/* Social-Media CSS*/
+
+.Social-Media {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #3a3a3a;
+    text-align: center;
+}
+
+.Social-Media img {
+    height: 24px;
+    width: 24px;
+    margin-left: 7px;
+    /* css-color-filter-generator  icon ne color change karva mate */
+    filter: grayscale(1) invert(0.7);
+    transition: filter 0.3s ease;
+}
+
+.Social-Media img:hover {
+    filter: grayscale(0) invert(0);
+}
+
+/* -----------------------------------------------Main-Content-------------------------------------------------- */
+
+.Main-Content {
+    background-color: #2a2a2a;
+    border: 2px solid #3a3a3a ;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+/* Navigation CSS*/
+
+#Navigation {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3a3a3a;
+    padding-bottom: 20px; 
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover,.active {
+    color: #FFBF00;
+}
+
+/* About Me CSS */
+
+#About-Me {
+    margin-bottom: 35px;
+}
+
+.Heading {
+    color: #e0e0e0;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.Line {
+    width: 60px;
+    height: 5px;
+    background-color: #FFBF00;
+    margin-bottom: 15px;
+}
+
+.Content {
+    color: #a0a0a0;
+    text-align: justify;
+}
+
+/* My Skills CSS */
+
+#My-Skills {
+    margin-bottom: 35px;
+}
+
+.Skills-Container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit , minmax(120px,1fr));
+    gap: 30px;
+}
+
+.Item {
+    background-color: #1e1e1e;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #3a3a3a;
+    transition: transfrom 0.3s ease,box-shadow 0.3s ease;
+}
+
+.Item img {
+    height: 48px;
+    width: 48px;
+    margin-bottom: 15px;
+    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+}
+
+.Item h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.Item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Education CSS */
+
+#Education {
+    margin-bottom: 20px;
+}
+
+.EdTech {
+    /* position: relative; */
+    margin-top: 20px;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+
+.degree {
+    font-size: 1.2rem;
+    color: #FFBF00;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.clgName {
+    
+    color: #e0e0e0;
+    margin-bottom: 3px;
+}
+
+.universityName {
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+.lerning {
+    color: #a0a0a0;
+}
+
+.EdFirst, .EdSecond {
+    margin-bottom: 10px;
+    position: relative;
+    padding: 25px;
+    padding-top: 5px;
+    
+}
+
+.bulletPiont {
+    height: 15px;
+    width: 15px;
+    border: 3px solid #FFBF00;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    z-index: 1;
+}
+
+.verticalLine-First {
+    position: absolute;
+    width: 2px;
+    top: 27px;
+    bottom: -13px;
+    border: 2px solid #3a3a3a;
+    left: 6px;
+}
+
+.verticalLine-Second {
+    position: absolute;
+    width: 2px;
+    top: 28px;
+    bottom: 0px;
+    border: 2px solid #3a3a3a;
+    left: 6px;
+}
+
+/* Portfolio CSS */
+
+.Portfolio {
+
+}
+
+.Project-Container {
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.Project {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #3a3a3a;
+    overflow: hidden;
+    transition: transform 0.5s ease,box-shadow 0.5s ease;
+}
+
+
+.Project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Project img {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #a0a0a0;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 15px;
+}
+
+.card span {
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+}
+
+
+.card div {
+    background-color: rgba(255, 191, 0, 0.1);
+    color: #FFBF00;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+
+@media screen and (max-width:1200px) {
+    .Container{
+        grid-template-columns: 1fr;
+        padding: 40px;
+    }
+
+    .SliderBar{
+        position: static;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .Project-Container{
+        grid-template-columns: 1fr;
+    }
+
+    #Navigation nav {
+        /* Adjust nav for smaller screens */
+        justify-content: center;
+        flex-wrap:nowrap;
+    }
+
+    .SliderBar{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
