@@ -95,4 +95,5 @@ https://mahammad-rahil-vahora.github.io/codealpha_tasks/Portfolio/
 ---
 
 ⭐ Thank you for visiting my CodeAlpha Internship Projects Repository!
+<br>
 ⭐ If you found this Projects Repository helpful, consider giving it a star on GitHub!
